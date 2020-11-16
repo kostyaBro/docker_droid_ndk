@@ -20,7 +20,4 @@ RUN apt-get -qq update && apt-get install -qqy --no-install-recommends build-ess
     echo y | /android-sdk-linux/tools/bin/sdkmanager "platforms;android-${ANDROID_COMPILE_SDK}" >/dev/null && \
     echo y | /android-sdk-linux/tools/bin/sdkmanager "platform-tools" >/dev/null && \
     echo y | /android-sdk-linux/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS}" >/dev/null && \
-#    chmod +x ./gradlew && \
-    set +o pipefail && \
-    yes | /android-sdk-linux/tools/bin/sdkmanager --licenses && \
-    set -o pipefail
+    yes | /android-sdk-linux/tools/bin/sdkmanager --licenses

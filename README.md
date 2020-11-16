@@ -6,10 +6,10 @@ This image based on *openjdk 8*, use the *android API 28* and *android NDK r20*.
 ## Example of .gitlab-ci.yml
 
 ```yaml
-image: TODO
+image: kostyabro/droid_ndk:28.20
 
 before_script:
-  - chmod +x ./gradlew # VERY IMPORTANT
+  - chmod +x ./gradlew
 
 stages:
   - build
